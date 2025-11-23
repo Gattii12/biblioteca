@@ -1,0 +1,5 @@
+[
+  { "nome": "Produto A", "categoria": "Categoria 1", "preco": 59.90 },
+  { "nome": "Produto B", "categoria": "Categoria 2", "preco": 120.00 },
+  { "nome": "Produto C", "categoria": "Categoria 3", "preco": 45.50 }
+]
