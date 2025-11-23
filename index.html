@@ -3,28 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <title>AM Games</title>
+
+  <!-- CSS principal -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Tema Claro/Escuro -->
+  <link id="tema-css" rel="stylesheet" href="css/tema_claro.css">
 </head>
+
 <body>
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="tabela.html">Catálogo</a>
-    <a href="contato.html">Contato</a>
-    <a href="equipe.html">Equipe</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">🎮 AM Games</div>
+    <div class="links">
+      <a href="index.html">Início</a>
+      <a href="tabela.html">Catálogo</a>
+      <a href="contato.html">Contato</a>
+      <a href="equipe.html">Equipe</a>
+    </div>
   </nav>
 
-  <main>
-    <h1>AM Games</h1>
-    <p>Bem-vindo ao nosso catálogo digital de jogos retrô! Aqui você encontra informações e imagens sobre jogos clássicos que marcaram gerações.</p>
-<tr>
-          <td><img src="img1/mario-1.jpg" alt="Mario" width="500"></td>
-</main>
+  <!-- HERO / BANNER -->
+  <header class="hero">
+    <h1>Bem-vindo à AM Games!</h1>
+    <p>Seu portal definitivo dos clássicos que marcaram gerações.</p>
+    <button class="cta-btn" onclick="window.location.href='tabela.html'">
+      📚 Ver Catálogo Completo
+    </button>
+  </header>
 
-<link id="tema-css" rel="stylesheet" href="css/tema_claro.css">
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="conteudo">
 
-<button id="botao-tema">🌗 Alternar Tema</button>
+    <h2>🎮 Destaque da Semana</h2>
 
-<script src="js/tema.js"></script>
+    <div class="card-jogo">
+      <img src="img1/mario-1.jpg" alt="Super Mario" class="thumb">
+      <div class="info">
+        <h3>Super Mario Bros</h3>
+        <p>Um dos maiores clássicos de todos os tempos! Lançado em 1985, tornou-se um ícone dos videogames.</p>
+        <button onclick="window.location.href='tabela.html'" class="btn-sec">
+          ➤ Ver mais jogos
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- BOTÃO DE TEMA -->
+  <button id="botao-tema" class="botao-tema">🌗 Alternar Tema</button>
+
+  <!-- JS -->
+  <script src="js/tema.js"></script>
 
 </body>
 </html>
