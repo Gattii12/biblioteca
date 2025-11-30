@@ -1,181 +1,240 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-nav {
-  background-color: #222;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
-main {
-  padding: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-th, td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+/* ===========================
+   RESET & BASE
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial;
-    margin: 20px;
-    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #efefef;
+    color: #222;
+    line-height: 1.6;
 }
 
-table {
-    background: white;
-    border-collapse: collapse;
-    width: 100%;
+/* ===========================
+   NAVBAR
+=========================== */
+.navbar, nav {
+    background: linear-gradient(90deg, #111, #222);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-th, td {
-    padding: 10px;
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-    color: blue;
+/* Logo AM GAMES */
+.logo {
+    font-size: 28px;
     font-weight: bold;
+    color: #ffca28; /* amarelo destaque */
+    text-shadow: 0 0 8px rgba(255, 202, 40, 0.8);
 }
 
-h1 {
-    color: #333;
+/* Links do menu */
+nav a, .navbar a {
+    color: #fdfdfd;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+nav a:hover, .navbar a:hover {
+    color: #ffca28;
+    transform: scale(1.07);
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #111;
-  padding: 15px 25px;
-}
-
-.navbar .logo {
-  color: #fff;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.navbar .links a {
-  margin-left: 15px;
-  color: #ddd;
-  text-decoration: none;
-  transition: .3s;
-}
-
-.navbar .links a:hover {
-  color: #fff;
-}
-
-/* HERO */
+/* ===========================
+   HERO / BANNER
+=========================== */
 .hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: url('img1/banner.jpg') center/cover;
-  color: white;
-  text-shadow: 0px 0px 8px black;
+    background: url('img1/banner.jpg') center/cover no-repeat;
+    padding: 90px 20px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 8px black;
+    border-bottom: 4px solid #ffca28;
 }
 
 .hero h1 {
-  font-size: 42px;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
 }
 
 .cta-btn {
-  margin-top: 20px;
-  padding: 12px 22px;
-  font-size: 18px;
-  border: none;
-  background: #ffcc00;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: .3s;
+    padding: 15px 25px;
+    background: #ffca28;
+    color: #111;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
 .cta-btn:hover {
-  background: #ffaa00;
+    background: #ffe082;
+    transform: scale(1.05);
 }
 
-/* CONTEÚDO */
-.conteudo {
-  width: 80%;
-  margin: auto;
-  padding: 30px 0;
+/* ===========================
+   MAIN CONTENT
+=========================== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.12);
 }
 
-.card-jogo {
-  display: flex;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #0002;
-  margin-top: 20px;
+/* ===========================
+   TITLES
+=========================== */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.card-jogo img.thumb {
-  width: 300px;
-  border-radius: 8px;
+/* ===========================
+   TABLE (CATÁLOGO)
+=========================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
 }
 
-.card-jogo .info {
-  padding-left: 20px;
+thead {
+    background: #111;
+    color: #fff;
 }
 
-.btn-sec {
-  margin-top: 10px;
-  padding: 10px 18px;
-  background: #444;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 
-.btn-sec:hover {
-  background: #222;
+tbody tr:hover {
+    background: #f5f5f5;
 }
 
-/* BOTÃO TEMA */
-.botao-tema {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  padding: 12px;
-  background: #222;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  box-shadow: 0px 0px 8px #0005;
+table img {
+    width: 100px;
+    border-radius: 6px;
 }
 
+/* ===========================
+   BUTTONS
+=========================== */
+button, .btn {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+    background: #ffca28;
+    color: #111;
+}
+
+/* ===========================
+   CARDS DA PÁGINA INICIAL
+=========================== */
+.grid-jogos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.card-pequeno {
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-pequeno:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(0,0,0,0.18);
+}
+
+.thumb-mini {
+    width: 120px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* ===========================
+   FORMULÁRIOS
+=========================== */
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #999;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #ffca28;
+    outline: none;
+}
+
+/* ===========================
+   BOTÃO TEMA ESCURO
+=========================== */
+#botao-tema {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #111;
+    color: white;
+    padding: 14px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#botao-tema:hover {
+    background: #ffca28;
+    color: #111;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #111;
+    color: white;
+    margin-top: 25px;
+    border-top: 4px solid #ffca28;
+}
